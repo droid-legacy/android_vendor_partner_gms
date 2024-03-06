@@ -2,6 +2,7 @@ android_app_import {
     name: "FDroid",
     apk: "FDroid.apk",
     presigned: true,
+    preprocessed: true,
     optional_uses_libs: [
         "androidx.window.extensions",
         "androidx.window.sidecar",
