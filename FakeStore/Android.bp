@@ -18,6 +18,7 @@ android_app_import {
     privileged: true,
     preprocessed: true,
     presigned: true,
+    skip_preprocessed_apk_checks: true,
     optional_uses_libs: [
         "androidx.window.extensions",
         "androidx.window.sidecar",
