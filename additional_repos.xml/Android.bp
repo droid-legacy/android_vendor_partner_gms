@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "additional_repos.xml",
+    src: "additional_repos.xml",
+    sub_dir: "org.fdroid.fdroid",
+    product_specific: true,
+}

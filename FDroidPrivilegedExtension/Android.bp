@@ -1,0 +1,17 @@
+prebuilt_etc {
+    name: "privapp-permissions-org.fdroid.fdroid.privileged.xml",
+    src: "privapp-permissions-org.fdroid.fdroid.privileged.xml",
+    sub_dir: "permissions",
+    product_specific: true,
+}
+
+android_app_import {
+    name: "FDroidPrivilegedExtension",
+    apk: "FDroidPrivilegedExtension.apk",
+    privileged: true,
+    presigned: true,
+    required: [
+        "privapp-permissions-org.fdroid.fdroid.privileged.xml",
+    ],
+    product_specific: true,
+}
