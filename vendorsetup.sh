@@ -23,6 +23,5 @@ get_microg_files GmsCore "com.google.android.gms"
 get_microg_files FakeStore "com.android.vending"
 
 get_fdroid_files F-Droid FDroid
-get_fdroid_files repo/org.fdroid.fdroid.privileged_2130 FDroidPrivilegedExtension
 
 set +euo pipefail

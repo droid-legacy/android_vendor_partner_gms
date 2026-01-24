@@ -26,9 +26,8 @@ Note 2. LineageOS now support ***restricted*** signature spoofing, in 18.1 and l
 ---------------
 
 The included APKs are:
- * FDroid packages (binaries sourced from [here](https://f-droid.org/packages/org.fdroid.fdroid) and [here](https://f-droid.org/packages/org.fdroid.fdroid.privileged))
+ * FDroid packages (binaries are sourced from [here](https://f-droid.org/packages/org.fdroid.fdroid))
    * FDroid: a catalogue of FOSS (Free and Open Source Software) applications for the Android platform
-   * FDroid Privileged Extension: a FDroid extension to ease the installation/removal of apps
    * additional_repos.xml: a simple package to include the [microG F-Droid repository](https://microg.org/fdroid/repo) and the [guardian FDroid-repo](https://guardianproject.info/fdroid) in the ROM (requires FDroid >= 1.5)
  * microG packages (binaries sourced from [here](https://github.com/microg/GmsCore/releases))
    * GmsCore: the main component of microG, a FOSS reimplementation of the Google Play Services (requires FakeStore - for full functionality)
