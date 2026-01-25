@@ -1,0 +1,16 @@
+---
+name: "Code lint"
+permissions: {}
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  shellchecker:
+    name: "ShellChecker"
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: "Checkout sources"
+        uses: actions/checkout@v6
+      - name: "ShellChecker"
+        uses: a5k-actions/shellchecker@v0
