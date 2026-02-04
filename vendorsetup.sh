@@ -6,23 +6,24 @@ set -euo pipefail
 echo "vendor/partner_gms/vendorsetup.sh called"
 
 get_microg_files() {
-    local name id src
-    name="$1"
-    id="$2"
-    src=$(curl --fail --silent --show-error https://api.github.com/repos/microg/GmsCore/releases/latest | grep -E "/$id-[0-9]+.apk\"" | cut -d"\"" -f4)
-    curl --fail --silent --show-error --location "$src" --output "$(dirname "${BASH_SOURCE[0]}")"/"$name"/"$name".apk
+    local trg_name src_name src_url
+    trg_name="${1}"
+    src_name="${2}"
+    src_url=$(curl --fail --silent --show-error https://api.github.com/repos/microg/GmsCore/releases/latest | grep -E "/${src_name}-[0-9]+.apk\"" | cut -d"\"" -f4)
+    curl --fail --silent --show-error --location "${src_url}" --output "$(dirname "${BASH_SOURCE[0]}")"/"${trg_name}"/"${trg_name}".apk
 }
 
 get_fdroid_files() {
-    src_name="$1"
-    trg_name="$2"
-    curl --fail --silent --show-error https://f-droid.org/"$src_name".apk --output "$(dirname "${BASH_SOURCE[0]}")"/"$trg_name"/"$trg_name".apk
+    local trg_name src_name
+    trg_name="${1}"
+    src_name="${2}"
+    curl --fail --silent --show-error https://f-droid.org/"${src_name}".apk --output "$(dirname "${BASH_SOURCE[0]}")"/"${trg_name}"/"${trg_name}".apk
 }
 
 get_microg_files GmsCore "com.google.android.gms"
 get_microg_files FakeStore "com.android.vending"
 
-get_fdroid_files F-Droid FDroid
-get_fdroid_files repo/org.fdroid.fdroid.privileged_2130 FDroidPrivilegedExtension
+get_fdroid_files FDroid F-Droid
+get_fdroid_files FDroidPrivilegedExtension repo/org.fdroid.fdroid.privileged_2130
 
 set +euo pipefail
