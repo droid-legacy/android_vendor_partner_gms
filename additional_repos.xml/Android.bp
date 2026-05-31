@@ -4,3 +4,9 @@ prebuilt_etc {
     sub_dir: "org.fdroid.fdroid",
     product_specific: true,
 }
+prebuilt_etc {
+    name: "additional_repos.json",
+    src: "additional_repos.json",
+    sub_dir: "org.fdroid.fdroid",
+    product_specific: true,
+}
