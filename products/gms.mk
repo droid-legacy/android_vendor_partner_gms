@@ -3,4 +3,5 @@ PRODUCT_PACKAGES += \
 	FakeStore \
 	FDroid \
 	FDroidPrivilegedExtension \
-	additional_repos.xml
+	additional_repos.xml \
+	additional_repos.json
